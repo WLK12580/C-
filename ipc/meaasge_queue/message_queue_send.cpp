@@ -13,7 +13,7 @@ int main(){
     char buff[100];
     for(int i=0;i<5;i++){
         strcpy(buff,"hello");
-        mq.send(buff,100,0);
+        mq.send(buff,100,0); //这里的100要与 boost::interprocess::message_queue mq(boost::interprocess::open_or_create,"MESSAGE_QUEUE",1024,100) 里的100一致，否则运行错误
         std::cout<<"buffer="<<buff<<std::endl;
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }

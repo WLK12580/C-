@@ -1,0 +1,1 @@
+/usr/bin/c++  -O0 -Wall -g2 -ggdb -rdynamic CMakeFiles/message_queue.dir/message_queue_send.cpp.o -o message_queue  -lrt 

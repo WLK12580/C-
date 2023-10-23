@@ -1,0 +1,4 @@
+/home/wlk/learn/ipc/build/CMakeFiles/message_queue.dir
+/home/wlk/learn/ipc/build/CMakeFiles/recv.dir
+/home/wlk/learn/ipc/build/CMakeFiles/edit_cache.dir
+/home/wlk/learn/ipc/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,1 @@
+/usr/bin/c++  -O0 -Wall -g2 -ggdb -rdynamic CMakeFiles/recv.dir/message_queue_recv.cpp.o -o recv 

@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/wlk/learn/opencv/build",
+  "command": "/usr/bin/g++  -isystem /usr/include/opencv4 -g -o CMakeFiles/project.dir/boost_01.cpp.o -c /home/wlk/learn/opencv/boost_01.cpp",
+  "file": "/home/wlk/learn/opencv/boost_01.cpp"
+}
+]

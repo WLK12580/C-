@@ -1,0 +1,3 @@
+/home/wlk/learn/opencl/build/CMakeFiles/HelloOpenCL.dir
+/home/wlk/learn/opencl/build/CMakeFiles/edit_cache.dir
+/home/wlk/learn/opencl/build/CMakeFiles/rebuild_cache.dir

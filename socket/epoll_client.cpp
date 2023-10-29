@@ -46,7 +46,7 @@ int main() {
   }
   st_clnsock.sin_port = htons(IP_PORT);  // 端口转换(物理字节序到网络字节序)
 
-  if (connect(i_sockfd, (struct sockaddr*)&st_clnsock, sizeof(st_clnsock)) <
+  if (connect(i_sockfd, (struct sockaddr *)&st_clnsock, sizeof(st_clnsock)) <
       0)  // 主动向设置的IP和端口号的服务端发出连接
   {
     printf("connect Error: %s (errno: %d)\n", strerror(errno), errno);

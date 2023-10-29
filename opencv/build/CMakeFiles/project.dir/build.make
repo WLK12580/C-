@@ -69,28 +69,28 @@ include CMakeFiles/project.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/project.dir/flags.make
 
-CMakeFiles/project.dir/boost_01.cpp.o: CMakeFiles/project.dir/flags.make
-CMakeFiles/project.dir/boost_01.cpp.o: ../boost_01.cpp
-CMakeFiles/project.dir/boost_01.cpp.o: CMakeFiles/project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wlk/learn/opencv/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/project.dir/boost_01.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/project.dir/boost_01.cpp.o -MF CMakeFiles/project.dir/boost_01.cpp.o.d -o CMakeFiles/project.dir/boost_01.cpp.o -c /home/wlk/learn/opencv/boost_01.cpp
+CMakeFiles/project.dir/cudaopencv.cpp.o: CMakeFiles/project.dir/flags.make
+CMakeFiles/project.dir/cudaopencv.cpp.o: ../cudaopencv.cpp
+CMakeFiles/project.dir/cudaopencv.cpp.o: CMakeFiles/project.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wlk/learn/opencv/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/project.dir/cudaopencv.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/project.dir/cudaopencv.cpp.o -MF CMakeFiles/project.dir/cudaopencv.cpp.o.d -o CMakeFiles/project.dir/cudaopencv.cpp.o -c /home/wlk/learn/opencv/cudaopencv.cpp
 
-CMakeFiles/project.dir/boost_01.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/boost_01.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wlk/learn/opencv/boost_01.cpp > CMakeFiles/project.dir/boost_01.cpp.i
+CMakeFiles/project.dir/cudaopencv.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/cudaopencv.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wlk/learn/opencv/cudaopencv.cpp > CMakeFiles/project.dir/cudaopencv.cpp.i
 
-CMakeFiles/project.dir/boost_01.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/boost_01.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wlk/learn/opencv/boost_01.cpp -o CMakeFiles/project.dir/boost_01.cpp.s
+CMakeFiles/project.dir/cudaopencv.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/cudaopencv.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wlk/learn/opencv/cudaopencv.cpp -o CMakeFiles/project.dir/cudaopencv.cpp.s
 
 # Object files for target project
 project_OBJECTS = \
-"CMakeFiles/project.dir/boost_01.cpp.o"
+"CMakeFiles/project.dir/cudaopencv.cpp.o"
 
 # External object files for target project
 project_EXTERNAL_OBJECTS =
 
-project: CMakeFiles/project.dir/boost_01.cpp.o
+project: CMakeFiles/project.dir/cudaopencv.cpp.o
 project: CMakeFiles/project.dir/build.make
 project: /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.4.5.4d
 project: /usr/lib/x86_64-linux-gnu/libopencv_alphamat.so.4.5.4d

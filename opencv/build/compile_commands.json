@@ -1,7 +1,7 @@
 [
 {
   "directory": "/home/wlk/learn/opencv/build",
-  "command": "/usr/bin/g++  -isystem /usr/include/opencv4 -g -o CMakeFiles/project.dir/boost_01.cpp.o -c /home/wlk/learn/opencv/boost_01.cpp",
-  "file": "/home/wlk/learn/opencv/boost_01.cpp"
+  "command": "/usr/bin/g++  -isystem /usr/include/opencv4 -O3 -DNDEBUG -o CMakeFiles/project.dir/cudaopencv.cpp.o -c /home/wlk/learn/opencv/cudaopencv.cpp",
+  "file": "/home/wlk/learn/opencv/cudaopencv.cpp"
 }
 ]

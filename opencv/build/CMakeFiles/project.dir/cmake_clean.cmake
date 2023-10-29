@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/project.dir/boost_01.cpp.o"
-  "CMakeFiles/project.dir/boost_01.cpp.o.d"
+  "CMakeFiles/project.dir/cudaopencv.cpp.o"
+  "CMakeFiles/project.dir/cudaopencv.cpp.o.d"
   "project"
   "project.pdb"
 )

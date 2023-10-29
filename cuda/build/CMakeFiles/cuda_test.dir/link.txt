@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/cuda_test.dir/cuda_test_generated_cuda_hello_world.cu.o -o cuda_test  /usr/lib/x86_64-linux-gnu/libcudart_static.a -ldl /usr/lib/x86_64-linux-gnu/librt.a /usr/lib/x86_64-linux-gnu/libcudart_static.a -ldl /usr/lib/x86_64-linux-gnu/librt.a 

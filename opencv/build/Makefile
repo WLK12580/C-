@@ -129,29 +129,29 @@ project/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/build
 .PHONY : project/fast
 
-boost_01.o: boost_01.cpp.o
-.PHONY : boost_01.o
+cudaopencv.o: cudaopencv.cpp.o
+.PHONY : cudaopencv.o
 
 # target to build an object file
-boost_01.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/boost_01.cpp.o
-.PHONY : boost_01.cpp.o
+cudaopencv.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/cudaopencv.cpp.o
+.PHONY : cudaopencv.cpp.o
 
-boost_01.i: boost_01.cpp.i
-.PHONY : boost_01.i
+cudaopencv.i: cudaopencv.cpp.i
+.PHONY : cudaopencv.i
 
 # target to preprocess a source file
-boost_01.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/boost_01.cpp.i
-.PHONY : boost_01.cpp.i
+cudaopencv.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/cudaopencv.cpp.i
+.PHONY : cudaopencv.cpp.i
 
-boost_01.s: boost_01.cpp.s
-.PHONY : boost_01.s
+cudaopencv.s: cudaopencv.cpp.s
+.PHONY : cudaopencv.s
 
 # target to generate assembly for a file
-boost_01.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/boost_01.cpp.s
-.PHONY : boost_01.cpp.s
+cudaopencv.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/cudaopencv.cpp.s
+.PHONY : cudaopencv.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... project"
-	@echo "... boost_01.o"
-	@echo "... boost_01.i"
-	@echo "... boost_01.s"
+	@echo "... cudaopencv.o"
+	@echo "... cudaopencv.i"
+	@echo "... cudaopencv.s"
 .PHONY : help
 
 

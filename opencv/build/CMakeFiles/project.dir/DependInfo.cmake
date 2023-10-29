@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/wlk/learn/opencv/boost_01.cpp" "CMakeFiles/project.dir/boost_01.cpp.o" "gcc" "CMakeFiles/project.dir/boost_01.cpp.o.d"
+  "/home/wlk/learn/opencv/cudaopencv.cpp" "CMakeFiles/project.dir/cudaopencv.cpp.o" "gcc" "CMakeFiles/project.dir/cudaopencv.cpp.o.d"
   )
 
 # Targets to which this target links.

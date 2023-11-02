@@ -64,16 +64,26 @@ int main() {
       printf("write Error: %s (errno: %d)\n", strerror(errno), errno);
       exit(0);
     }
-
-    memset(msg, 0, sizeof(msg));
-    if ((nrecvSize = read(i_sockfd, msg, MAXSIZE)) < 0)  // 接受数据
-    {
-      printf("read Error: %s (errno: %d)\n", strerror(errno), errno);
-    } else if (nrecvSize == 0) {
-      printf("Service Close!\n");
-    } else {
-      printf("Server return: %s\n", msg);
+    FILE *fd;
+    while (1) {
+      printf("test\n");
+      memset(msg, 0, sizeof(msg));
+      if ((nrecvSize = read(i_sockfd, msg, MAXSIZE)) < 0)  // 接受数据
+      {
+        printf("read Error: %s (errno: %d)\n", strerror(errno), errno);
+        break;
+      } else if (nrecvSize == 0) {
+        printf("Service Close!\n");
+        break;
+      } else {
+        printf("Server return: %s\n", msg);
+        FILE *fd = fopen("file_fd", "w+");
+        fprintf(fd, "%s", msg);
+        
+      }
     }
+    fclose(fd);
   }
+
   return 0;
 }

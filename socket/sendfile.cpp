@@ -1,8 +1,12 @@
 #include <memory>
-
+#include<sys/sendfile.h>
 #include "epoll_header.hpp"
+#include <fcntl.h>
+#include <assert.h>
+#include <iostream>
+#include<syslog.h>
 #define MAXSIZE 1024
-int main() {
+int main(int argc,char *argv[]) {
   char msg[MAXSIZE];
   FILE *filefd;
   int epollfd = -1, epoll_ncount = 0, acceptfd = -1;
@@ -23,7 +27,16 @@ int main() {
     exit(-1);
   }
   printf("======waiting for client's request======\n");
-  while (1) {;
+  
+  while (1) {
+    const char *filename=argv[1];
+    int filefd=open(filename,O_RDONLY);
+    assert(filefd>0);
+    struct stat stat_buf;
+    fstat(filefd,&stat_buf);
+    uid_t id=getuid();
+    uid_t eid=geteuid();
+    printf("id=%d eid=%d\n",id,eid);
     if ((epoll_ncount = epoll_wait(epollfd, eventbuff, MAXSIZE, -1)) < 0) { //返回值：成功时，epoll_wait（）返回为请求的I / O准备就绪的文件描述符的数目；如果在请求的超时毫秒内没有文件描述符准备就绪，则返回零。发生错误时，epoll_wait（）返回-1并正确设置errno。
       printf("epoll_ctl Error: %s (errno: %d)\n", strerror(errno), errno);
       exit(-1);
@@ -64,12 +77,17 @@ int main() {
             continue;
           } else {
             printf("recved_data=%s", msg);
-            syslog(LOG_INFO,msg);
+            syslog(LOG_INFO,"recved_msg=%s\n",msg);
             for (int i = 0; msg[i] != '\0'; i++) {
               msg[i] = toupper(msg[i]);
             }
             if (write(epoll_recved_fd, msg, strlen(msg) + 1) < 0) {
               printf("write Error: %s (errno: %d)\n", strerror(errno), errno);
+            }
+            if (filename != nullptr) {
+              if (sendfile(epoll_recved_fd, filefd, 0, stat_buf.st_size) <= 0) {
+                close(filefd);
+              }
             }
           }
         }
@@ -80,6 +98,5 @@ int main() {
   close(epollfd);
   close(socker_ptr->GetSocketfd());
   std::cout << "service_close\n";
-
   return 0;
 }

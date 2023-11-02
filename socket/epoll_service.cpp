@@ -89,6 +89,8 @@ int epoll_wait(int epfd, struct epoll_event * events, int maxevents, int timeout
 #include <ctype.h>
 #include <sys/epoll.h>	//epoll头文件
 
+#include<syslog.h>
+
 #define MAXSIZE 1024
 #define IP_ADDR "127.0.0.1"
 #define IP_PORT 8888
@@ -197,6 +199,7 @@ int main()
 					else
 					{
 						printf("recvMsg:%s", msg);
+
 						for(int i=0; msg[i] != '\0'; i++)
 						{
 							msg[i] = toupper(msg[i]);

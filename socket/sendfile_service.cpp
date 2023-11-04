@@ -17,12 +17,12 @@ int main(int argc, char *argv[]) {
     socker_ptr->Bind();
     socker_ptr->Listen();
   }
-  if ((epollfd = epoll_create(MAXSIZE)) < 0) {
+  if ((epollfd = epoll_create(MAXSIZE)) < 0) { //创建epoll内核事件表，MAXSIZE表示内核时间表的大小
     printf("epoll_create Error: %s (errno: %d)\n", strerror(errno), errno);
     exit(-1);
   }
-  struct epoll_event ev, eventbuff[MAXSIZE];
-  ev.events = EPOLLIN;                                                          // 文件描述符刻度
+  struct epoll_event ev, eventbuff[MAXSIZE]; 
+  ev.events = EPOLLIN;   //EPOLLIN事件则只有当对端有数据写入时才会触发，所以触发一次后需要不断读取所有数据直到读完EAGAIN为止。否则剩下的数据只有在下次对端有写入时才能一起取出来了。                                                     // 文件描述符刻度
   ev.data.fd = socker_ptr->GetSocketfd();                                       // socket文件描述符
   if (epoll_ctl(epollfd, EPOLL_CTL_ADD, socker_ptr->GetSocketfd(), &ev) < 0) {  // epoll控制操作
     printf("epoll_ctl Error: %s (errno: %d)\n", strerror(errno), errno);
@@ -46,8 +46,8 @@ int main(int argc, char *argv[]) {
       printf("timeout,no data connect\n");
       exit(-1);
     } else {
-      for (int i = 0; i < epoll_ncount; i++) {
-        int epoll_recved_fd = eventbuff[i].data.fd;
+      for (int i = 0; i < epoll_ncount; i++) { //遍历就绪事件
+        int epoll_recved_fd = eventbuff[i].data.fd; 
         if (epoll_recved_fd == socker_ptr->GetSocketfd()) {
           // 处理新连接的用户
           if ((acceptfd = accept(socker_ptr->GetSocketfd(), (struct sockaddr *)NULL, NULL)) < 0) {
@@ -78,29 +78,11 @@ int main(int argc, char *argv[]) {
             close(epoll_recved_fd);                                    // 关闭相关的文件描述符
             continue;
           } else {
-            if (strlen(msg) != 0) {
-              printf("recved_data=%s", msg);
-              syslog(LOG_INFO, "recved_msg=%s\n", msg);
-              for (int i = 0; msg[i] != '\0'; i++) {
-                msg[i] = toupper(msg[i]);
-              }
-              if (write(epoll_recved_fd, msg, strlen(msg) + 1) < 0) {
-                printf("write Error: %s (errno: %d)\n", strerror(errno), errno);
-              }
-            }
-            if (filename != nullptr) {
-              std::cout << "filefd=" << filefd << std::endl;
-              printf("filename=%s\n", filename);
-              if (sendfile(epoll_recved_fd, filefd, NULL, stat_buf.st_size) <= 0) {
-                if(errno==0){
-                    printf("sendfile Sucessed:%s (errno:%d)\n", strerror(errno), errno);
-                }else{
-                  printf("sendfile Error:%s (errno:%d)\n", strerror(errno), errno);
-                }
-              } else {
-                printf("sendfile\n");
-              }
-            }
+            int filefd=open(filename,O_RDONLY);
+            struct stat stat_buf;
+            fstat(filefd,&stat_buf);
+            sendfile(epoll_recved_fd,filefd,NULL,stat_buf.st_size);
+            printf("send sucessed\n");
           }
         }
       }

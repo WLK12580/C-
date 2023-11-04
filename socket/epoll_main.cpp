@@ -1,5 +1,4 @@
 #include <memory>
-
 #include "epoll_header.hpp"
 #define MAXSIZE 1024
 int main() {

@@ -59,6 +59,7 @@ int main() {
 
   while (1)  // 循环输入，向服务端发送数据并接受服务端返回的数据
   {
+    FILE *fd=nullptr;
     fgets(msg, MAXSIZE, stdin);
     printf("will send: %s", msg);
     if (write(i_sockfd, msg, MAXSIZE) < 0)  // 发送数据
@@ -80,10 +81,11 @@ int main() {
       break;
     } else {
       printf("Server return: %s\n", msg);
-      FILE *fd = fopen("file_fd", "w+");
+      fd = fopen("file_fd", "w+");
       fprintf(fd, "%s", msg);
     }
     std::cout << "fd" << std::endl;
+    fclose(fd);
   }
 
   return 0;

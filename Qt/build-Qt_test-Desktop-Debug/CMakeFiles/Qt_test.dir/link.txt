@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/Qt_test.dir/Qt_test_autogen/mocs_compilation.cpp.o CMakeFiles/Qt_test.dir/main.cpp.o CMakeFiles/Qt_test.dir/widget.cpp.o -o Qt_test  -Wl,-rpath,/home/wlk/anaconda3/lib /home/wlk/anaconda3/lib/libQt5Widgets.so.5.15.2 /home/wlk/anaconda3/lib/libQt5Gui.so.5.15.2 /home/wlk/anaconda3/lib/libQt5Core.so.5.15.2 

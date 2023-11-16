@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/QComboBox.dir/QComboBox_autogen/mocs_compilation.cpp.o CMakeFiles/QComboBox.dir/main.cpp.o CMakeFiles/QComboBox.dir/widget.cpp.o -o QComboBox  -Wl,-rpath,/home/wlk/anaconda3/lib /home/wlk/anaconda3/lib/libQt5Widgets.so.5.15.2 /home/wlk/anaconda3/lib/libQt5Gui.so.5.15.2 /home/wlk/anaconda3/lib/libQt5Core.so.5.15.2 

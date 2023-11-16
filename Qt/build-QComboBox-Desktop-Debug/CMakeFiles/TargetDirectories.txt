@@ -1,0 +1,4 @@
+/home/wlk/learn/Qt/build-QComboBox-Desktop-Debug/CMakeFiles/QComboBox.dir
+/home/wlk/learn/Qt/build-QComboBox-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/wlk/learn/Qt/build-QComboBox-Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/wlk/learn/Qt/build-QComboBox-Desktop-Debug/CMakeFiles/QComboBox_autogen.dir

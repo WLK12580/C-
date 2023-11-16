@@ -1,0 +1,4 @@
+/home/wlk/learn/Qt/build-Qt_test-Desktop-Debug/CMakeFiles/Qt_test.dir
+/home/wlk/learn/Qt/build-Qt_test-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/wlk/learn/Qt/build-Qt_test-Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/wlk/learn/Qt/build-Qt_test-Desktop-Debug/CMakeFiles/Qt_test_autogen.dir

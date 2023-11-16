@@ -16,14 +16,14 @@ int main(){
     struct ReMove{
         ReMove(){}
         ~ReMove(){
-            sem_unlink("SEM");
+            sem_unlink("SEM"); //删除有名信号量
         }
     }remove;
-    sem_t *sem=sem_open("SEM",O_CREAT|O_RDWR,0666,1);
+    sem_t *sem=sem_open("SEM",O_CREAT|O_RDWR,0666,1);  //创建命名信号量
     if(sem==SEM_FAILED){
         perror("sem_open error");
     }
-    Display(sem);
-    sem_close(sem);
+    Display(sem); 
+    sem_close(sem); //关闭信号量
     return 0;
 }

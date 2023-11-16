@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/wlk/learn/opencv/build",
-  "command": "/usr/bin/g++  -isystem /usr/include/opencv4 -O3 -DNDEBUG -o CMakeFiles/project.dir/cudaopencv.cpp.o -c /home/wlk/learn/opencv/cudaopencv.cpp",
-  "file": "/home/wlk/learn/opencv/cudaopencv.cpp"
-}
-]

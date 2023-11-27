@@ -7,12 +7,27 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
+  "/home/wlk/anaconda3/lib/cmake/Boost-1.73.0/BoostConfig.cmake"
+  "/home/wlk/anaconda3/lib/cmake/Boost-1.73.0/BoostConfigVersion.cmake"
+  "/home/wlk/anaconda3/lib/cmake/BoostDetectToolset-1.73.0.cmake"
+  "/home/wlk/anaconda3/lib/cmake/boost_filesystem-1.73.0/boost_filesystem-config-version.cmake"
+  "/home/wlk/anaconda3/lib/cmake/boost_filesystem-1.73.0/boost_filesystem-config.cmake"
+  "/home/wlk/anaconda3/lib/cmake/boost_filesystem-1.73.0/libboost_filesystem-variant-shared.cmake"
+  "/home/wlk/anaconda3/lib/cmake/boost_filesystem-1.73.0/libboost_filesystem-variant-static.cmake"
+  "/home/wlk/anaconda3/lib/cmake/boost_headers-1.73.0/boost_headers-config-version.cmake"
+  "/home/wlk/anaconda3/lib/cmake/boost_headers-1.73.0/boost_headers-config.cmake"
+  "/home/wlk/anaconda3/lib/cmake/boost_iostreams-1.73.0/boost_iostreams-config-version.cmake"
+  "/home/wlk/anaconda3/lib/cmake/boost_iostreams-1.73.0/boost_iostreams-config.cmake"
+  "/home/wlk/anaconda3/lib/cmake/boost_iostreams-1.73.0/libboost_iostreams-variant-shared.cmake"
+  "/home/wlk/anaconda3/lib/cmake/boost_iostreams-1.73.0/libboost_iostreams-variant-static.cmake"
+  "/home/wlk/anaconda3/lib/cmake/boost_serialization-1.73.0/boost_serialization-config-version.cmake"
+  "/home/wlk/anaconda3/lib/cmake/boost_serialization-1.73.0/boost_serialization-config.cmake"
+  "/home/wlk/anaconda3/lib/cmake/boost_serialization-1.73.0/libboost_serialization-variant-shared.cmake"
+  "/home/wlk/anaconda3/lib/cmake/boost_serialization-1.73.0/libboost_serialization-variant-static.cmake"
   "../CMakeLists.txt"
   "CMakeFiles/3.22.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeSystem.cmake"
-  "CMakeFiles/cuda_test.dir/cuda_test_generated_cuda_array.cu.o.cmake.pre-gen"
-  "CMakeFiles/cuda_test.dir/cuda_test_generated_cuda_array.cu.o.depend"
   "/usr/share/cmake-3.22/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake"
@@ -21,20 +36,13 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake"
-  "/usr/share/cmake-3.22/Modules/CheckCSourceCompiles.cmake"
-  "/usr/share/cmake-3.22/Modules/CheckIncludeFile.cmake"
-  "/usr/share/cmake-3.22/Modules/CheckLibraryExists.cmake"
   "/usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "/usr/share/cmake-3.22/Modules/Compiler/GNU-C.cmake"
   "/usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake"
   "/usr/share/cmake-3.22/Modules/Compiler/GNU.cmake"
-  "/usr/share/cmake-3.22/Modules/FindCUDA.cmake"
-  "/usr/share/cmake-3.22/Modules/FindCUDA/run_nvcc.cmake"
-  "/usr/share/cmake-3.22/Modules/FindCUDA/select_compute_arch.cmake"
+  "/usr/share/cmake-3.22/Modules/FindBoost.cmake"
   "/usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/share/cmake-3.22/Modules/FindPackageMessage.cmake"
-  "/usr/share/cmake-3.22/Modules/FindThreads.cmake"
-  "/usr/share/cmake-3.22/Modules/Internal/CheckSourceCompiles.cmake"
   "/usr/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake"
   "/usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake"
   "/usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake"
@@ -50,12 +58,10 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "CMakeFiles/cuda_test.dir/cuda_test_generated_cuda_array.cu.o.cmake.pre-gen"
-  "CMakeFiles/cuda_test.dir/cuda_test_generated_cuda_array.cu.o.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/cuda_test.dir/DependInfo.cmake"
+  "CMakeFiles/project.dir/DependInfo.cmake"
   )

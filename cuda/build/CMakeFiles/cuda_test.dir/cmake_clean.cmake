@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/cuda_test.dir/cuda_test_generated_cuda_hello_world.cu.o"
+  "CMakeFiles/cuda_test.dir/cuda_test_generated_cuda_array.cu.o"
   "cuda_test"
   "cuda_test.pdb"
 )
